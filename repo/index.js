@@ -59,6 +59,18 @@ export class ManualOverrideRepo {
 
 export class MerchantRepo {
   static get_merchant_configuration = async (id) => MerchantConfiguration.findByPk(id)
+
+  static handle_merchant_update = async (id, minimum_loan_amount, maximum_loan_amount, prequal_enabled) => {
+    const foundMerchant = await MerchantConfiguration.findByPk(id);
+
+    const updateMerchant = await foundMerchant.update({
+      minimum_loan_amount,
+      maximum_loan_amount,
+      prequal_enabled,
+    });
+
+    return updateMerchant;
+  };
 }
 
 export class TermsRepo {
