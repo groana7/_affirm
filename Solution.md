@@ -20,5 +20,3 @@ Answers to the following questions would provide future improvements that can be
 
   - What is the minimumn difference between minimum and maximum loan amounts?
   - This route needs to be secured so that only logged in merchants can change their configuation.
-  - Would it be best to create a separate file for mounting our routes as opposed to mounting them all in the `app.js` file?
-  - Would it be best to add try/catch blocks inside of our routes?
